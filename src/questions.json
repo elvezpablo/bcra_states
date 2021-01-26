@@ -1,0 +1,138 @@
+[
+  {
+    "id": "bcra_0",
+    "field": "consent",
+    "question": "May we share your results with your doctor?",
+    "tooltip": null,
+    "inputType": "radio",
+    "values": ["Yes", "No"]
+  },
+  {
+    "id": "bcra_1",
+    "field": "diagnosis",
+    "question": "Have you ever been diagnosed by a physician with breast cancer?  ",
+    "tooltip": null,
+    "inputType": "radio",
+    "values": ["Yes", "No"]
+  },
+  {
+    "id": "bcra_2",
+    "field": "predisposed",
+    "question": "Have you been diagnosed by a physician with a genetic mutation that predisposes you to breast cancer?",
+    "tooltip": "In order to be diagnosed, you would have given your physician a DNA sample (blood, saliva, or a swab from the inside of your cheek).",
+    "inputType": "radio",
+    "values": ["Yes", "No", "Unknown"]
+  },
+  {
+    "id": "bcra_3",
+    "field": "age",
+    "question": "What is your age?",
+    "tooltip": null,
+    "inputType": "input",
+    "value": [],
+    "placeholder": "Age",
+    "validation": {
+      "message": "Check back soon for a version that works with your age range."
+    }
+  },
+  {
+    "id": "bcra_4",
+    "field": "ethnicity",
+    "question": "What is your ethnicity?",
+    "tooltip": "Different races have different predispositions to certain cancers.",
+    "inputType": "dropdown",
+    "values": [
+      "White",
+      "African American",
+      "Hispanic / Latina",
+      "Asian American",
+      "American Indian / Alaskan Native",
+      "Other"
+    ],
+    "placeholder": "Ethnicity"
+  },
+  {
+    "id": "bcra_4a",
+    "question": "What is your sub ethnicity?",
+    "tooltip": null,
+    "inputType": "dropdown",
+    "values": [
+      "Chinese",
+      "Filipino",
+      "Hawaiian",
+      "Pacific Islander",
+      "Japanese",
+      "Other Asian"
+    ],
+    "placeholder": "Sub Ethnicity",
+    "displayIf": {
+      "bcra_4": ["Asian American"]
+    }
+  },
+  {
+    "id": "bcra_4b",
+    "question": "Where were you born?",
+    "tooltip": "There has been evidence that risk levels differ based on place of birth for Hispanic women. ",
+    "inputType": "dropdown",
+    "values": ["Born outside of U.S.", "U.S. Born"],
+    "displayIf": {
+      "bcra_4": ["Hispanic / Latina"]
+    }
+  },
+  {
+    "id": "bcra_5",
+    "question": "Have you ever had a breast biopsy with a benign (not cancer) diagnosis?",
+    "tooltip": "Breast biopsies are often prescribed if you have dense breasts, which are more frequently diagnosed with breast cancer.",
+    "inputType": "radio",
+    "values": ["Yes", "No", "Unknown"]
+  },
+  {
+    "id": "bcra_5a",
+    "question": "How many breast biopsies with a benign diagnosis have you had?",
+    "tooltip": null,
+    "inputType": "radio",
+    "values": ["1", "2 or more"],
+    "displayIf": {
+      "bcra_5": ["Yes"]
+    }
+  },
+  {
+    "id": "bcra_5b",
+    "question": "Have you ever had a breast biopsy with the result atypical hyperplasia?",
+    "tooltip": "Atypical hyperplasia is a pre-cancerous state and refers to the presence of abnormal non-cancerous cells. ",
+    "inputType": "radio",
+    "values": ["Yes", "No", "Unknown"],
+    "displayIf": {
+      "bcra_5": ["Yes"]
+    }
+  },
+  {
+    "id": "bcra_6",
+    "field": "menstruation",
+    "question": "How old were you when you got your first period?",
+    "tooltip": "The younger you started menstruating, the higher your risk of breast cancer.",
+    "inputType": "radio",
+    "values": ["7-11", "12-13", "14 or older"]
+  },
+  {
+    "id": "bcra_7",
+    "question": "At what age did you give birth for the first time?   ",
+    "tooltip": "The earlier you give birth, the lower your risk for breast cancer. ",
+    "inputType": "radio",
+    "values": [
+      "No births",
+      "< 20",
+      "20-24",
+      "25-29",
+      "30 - or older",
+      "Unknown"
+    ]
+  },
+  {
+    "id": "bcra_8",
+    "question": "How many of your first-degree relatives (mother, sisters, daughters) have had breast cancer?",
+    "tooltip": "Just one close family member with cancer doubles your risk.",
+    "inputType": "radio",
+    "values": ["None", "One", "More than one", "Unknown"]
+  }
+]
