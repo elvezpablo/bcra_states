@@ -1,4 +1,4 @@
-import questions from "./questions.json";
+import questions from "../questions.json";
 import { atom } from "recoil";
 
 // try https://github.com/pmndrs/jotai at some point

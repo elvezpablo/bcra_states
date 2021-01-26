@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { questionsState } from "./Atoms";
+import { questionsState } from "./state/Atoms";
 import Question from "./Question";
 
 const Container = styled.div`

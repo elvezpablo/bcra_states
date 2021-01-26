@@ -1,19 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { answersState, questionsState } from "./Atoms";
+import { answersState, questionsState } from "./state/Atoms";
 import BCRA from "./BCRA";
+
+const Container = styled.div`
+  display: float;
+  justify-content: space-between;
+`;
+
+const Counter = styled.div`
+  border-bottom: 1px solid #333;
+`;
 
 const Progress = () => {
   const answers = useRecoilValue(answersState);
   const questions = useRecoilValue(questionsState);
   return (
-    <>
-      <div>
+    <Container>
+      <Counter>
         {answers.size} of {questions.length}
-      </div>
+      </Counter>
       {answers.size === questions.length && <BCRA />}
-    </>
+    </Container>
   );
 };
 

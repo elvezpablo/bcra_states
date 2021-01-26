@@ -3,7 +3,7 @@ import styled from "styled-components";
 import InputFactory from "./InputFactory";
 import Navigation from "./Navigation";
 import { useRecoilValue } from "recoil";
-import { formState } from "./Atoms";
+import { formState } from "./state/Atoms";
 
 const Container = styled.div`
   border: 1px solid rgba(33, 33, 33, 0.4);
@@ -19,10 +19,6 @@ const Heading = styled.h2`
   text-align: center;
   margin-top: 18px;
   margin-bottom: 8px;
-`;
-
-const ConditionalQuestion = styled(Container)`
-  border-left: 12px solid rgba(33, 33, 33, 0.4);
 `;
 
 const Id = styled.div`

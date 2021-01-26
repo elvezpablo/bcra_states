@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { formState, questionsState, answersState } from "./Atoms";
+import { formState, questionsState, answersState } from "./state/Atoms";
 
 const Container = styled.div`
   display: flex;

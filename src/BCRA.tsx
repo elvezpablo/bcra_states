@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 import axios from "axios";
 import { useRecoilValue } from "recoil";
-import { answersState } from "./Atoms";
+import { answersState } from "./state/Atoms";
 import transform from "./transform";
+
+const Container = styled.div`
+  display: inline-block;
+  border: 3px solid red;
+  border-radius: 3px;
+`;
 
 const request = axios.create({
   baseURL: "https://limitless-eyrie-26993.herokuapp.com"
@@ -25,7 +32,7 @@ const BCRA = () => {
     fetchData();
   }, [answers]);
 
-  return <div>{`risk: ${result ? parseInt(result, 10) : 0}%`}</div>;
+  return <Container>{`risk: ${result ? parseInt(result, 10) : 0}%`}</Container>;
 };
 
 export default BCRA;
