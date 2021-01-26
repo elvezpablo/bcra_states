@@ -90,18 +90,7 @@ const InputFactory = ({
     );
   }
 
-  return (
-    <Container>
-      <button
-        disabled={current !== id}
-        onClick={() => {
-          setAnswer("true");
-        }}
-      >
-        {answers.has(id) ? "set" : "not set"}
-      </button>
-    </Container>
-  );
+  return <Container>{`No input of type ${type}`}</Container>;
 };
 
 export default InputFactory;

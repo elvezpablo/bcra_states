@@ -25,7 +25,7 @@ const Radio = ({
           setAnswer(e.target.value);
         }}
       >
-        <option key="no_option">{`select...`}</option>
+        <option key="no_option" value="">{`select...`}</option>
         {values && values.map((v) => <option key={v}>{v}</option>)}
       </select>
     </Container>
