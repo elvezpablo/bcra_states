@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import InputFactory from "./InputFactory";
 import Navigation from "./Navigation";
-import { useRecoilValue } from "recoil";
-import { formState } from "./state/Atoms";
 
 const Container = styled.div`
   border: 1px solid rgba(33, 33, 33, 0.4);
@@ -36,15 +34,20 @@ type QuestionProps = {
   question: string;
   tooltip: string | null;
   inputType: string;
+  current: string;
   values: string[] | undefined;
 };
 
-const Question = ({ question, id, values, inputType }: QuestionProps) => {
-  const form = useRecoilValue(formState);
-
+const Question = ({
+  question,
+  id,
+  values,
+  inputType,
+  current
+}: QuestionProps) => {
   return (
     <>
-      <Container current={form.current === id}>
+      <Container current={current === id}>
         <Id>{id}</Id>
         <Heading>{question}</Heading>
         <InputFactory id={id} type={inputType} values={values} />

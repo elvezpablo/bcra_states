@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { formState, questionsState, answersState } from "./state/Atoms";
+import { formState, filteredQuestionState } from "./state/Atoms";
 
 const Container = styled.div`
   display: flex;
@@ -15,8 +15,7 @@ const Navigation = ({ id }: { id: string }) => {
   Question: Should all this state live in a wrapper or use the selector?  
   */
   const [{ current }, setFormState] = useRecoilState(formState);
-  const questions = useRecoilValue(questionsState);
-  const answers = useRecoilValue(answersState);
+  const [questions, answers] = useRecoilValue(filteredQuestionState);
 
   const previousDisabled = () => {
     if (current !== id) {

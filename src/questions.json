@@ -1,7 +1,6 @@
 [
   {
     "id": "bcra_0",
-    "field": "consent",
     "question": "May we share your results with your doctor?",
     "tooltip": null,
     "inputType": "radio",
@@ -9,7 +8,6 @@
   },
   {
     "id": "bcra_1",
-    "field": "diagnosis",
     "question": "Have you ever been diagnosed by a physician with breast cancer?  ",
     "tooltip": null,
     "inputType": "radio",
@@ -17,7 +15,6 @@
   },
   {
     "id": "bcra_2",
-    "field": "predisposed",
     "question": "Have you been diagnosed by a physician with a genetic mutation that predisposes you to breast cancer?",
     "tooltip": "In order to be diagnosed, you would have given your physician a DNA sample (blood, saliva, or a swab from the inside of your cheek).",
     "inputType": "radio",
@@ -25,19 +22,14 @@
   },
   {
     "id": "bcra_3",
-    "field": "age",
     "question": "What is your age?",
     "tooltip": null,
     "inputType": "input",
-    "value": [],
-    "placeholder": "Age",
-    "validation": {
-      "message": "Check back soon for a version that works with your age range."
-    }
+    "values": [],
+    "placeholder": "Age"
   },
   {
     "id": "bcra_4",
-    "field": "ethnicity",
     "question": "What is your ethnicity?",
     "tooltip": "Different races have different predispositions to certain cancers.",
     "inputType": "dropdown",
@@ -54,7 +46,7 @@
   {
     "id": "bcra_4a",
     "question": "What is your sub ethnicity?",
-    "tooltip": null,
+    "tooltip": "",
     "inputType": "dropdown",
     "values": [
       "Chinese",
@@ -89,7 +81,7 @@
   {
     "id": "bcra_5a",
     "question": "How many breast biopsies with a benign diagnosis have you had?",
-    "tooltip": null,
+    "tooltip": "How many breast biopsies with a benign diagnosis have you had?",
     "inputType": "radio",
     "values": ["1", "2 or more"],
     "displayIf": {
@@ -108,7 +100,6 @@
   },
   {
     "id": "bcra_6",
-    "field": "menstruation",
     "question": "How old were you when you got your first period?",
     "tooltip": "The younger you started menstruating, the higher your risk of breast cancer.",
     "inputType": "radio",

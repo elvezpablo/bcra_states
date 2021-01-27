@@ -25,36 +25,12 @@ const InputFactory = ({
   values: string[] | undefined;
 }) => {
   const [answers, setAnswersState] = useRecoilState(answersState);
-  const [, setQuestionsState] = useRecoilState(questionsState);
   const { current } = useRecoilValue(formState);
 
   const setAnswer = (value: string | undefined) => {
     const newMap = new Map(answers);
     if (value) {
       newMap.set(id, value);
-      /**
-       * Uses the original set of questions as a base. Tried reset and it didn't work.
-       *
-       * filters out the questions with conditions that do not match the
-       * desplayIf criteria
-       */
-      const newQuestions = theQuestions.filter(({ id, displayIf }) => {
-        if (displayIf) {
-          return (
-            Object.keys(displayIf).filter((k) => {
-              const questionHasMatchingAnswer = (displayIf as any)[k].includes(
-                newMap.get(k)
-              );
-              if (!questionHasMatchingAnswer) {
-                newMap.delete(id);
-              }
-              return questionHasMatchingAnswer;
-            }).length > 0
-          );
-        }
-        return true;
-      });
-      setQuestionsState(newQuestions);
     }
 
     setAnswersState(newMap);
