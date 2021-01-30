@@ -25,8 +25,7 @@
     "question": "What is your age?",
     "tooltip": null,
     "inputType": "input",
-    "values": [],
-    "placeholder": "Age"
+    "values": []
   },
   {
     "id": "bcra_4",
@@ -40,8 +39,7 @@
       "Asian American",
       "American Indian / Alaskan Native",
       "Other"
-    ],
-    "placeholder": "Ethnicity"
+    ]
   },
   {
     "id": "bcra_4a",
@@ -56,7 +54,6 @@
       "Japanese",
       "Other Asian"
     ],
-    "placeholder": "Sub Ethnicity",
     "displayIf": {
       "bcra_4": ["Asian American"]
     }

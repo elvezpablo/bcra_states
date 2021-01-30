@@ -11,9 +11,6 @@ const Container = styled.div`
 const Button = styled.button``;
 
 const Navigation = ({ id }: { id: string }) => {
-  /*
-  Question: Should all this state live in a wrapper or use the selector?  
-  */
   const [{ current }, setFormState] = useRecoilState(formState);
   const [questions, answers] = useRecoilValue(filteredQuestionState);
 

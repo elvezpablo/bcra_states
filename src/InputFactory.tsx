@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  answersState,
-  formState,
-  questionsState,
-  theQuestions
-} from "./state/Atoms";
+import { answersState, formState } from "./state/Atoms";
 import Radio from "./inputs/Radio";
 import Select from "./inputs/Select";
 import Input from "./inputs/Input";

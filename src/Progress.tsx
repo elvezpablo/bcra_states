@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { filteredQuestionState } from "./state/Atoms";
+import { filteredQuestionState, FilteredDataType } from "./state/Atoms";
 import BCRA from "./BCRA";
 
 const Container = styled.div`
@@ -14,7 +14,7 @@ const Counter = styled.div`
 `;
 
 const Progress = () => {
-  const [questions, answers] = useRecoilValue<[any[], Map<string, string>]>(
+  const [questions, answers] = useRecoilValue<FilteredDataType>(
     filteredQuestionState
   );
 
